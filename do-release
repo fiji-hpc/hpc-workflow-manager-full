@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#this script build required libraries and copies into Fiji installation directory
+FIJI_APP=ImageJ-linux64
+UPDATE_SITE=P2E-IT4Innovations
+mvn clean install
+
+DIR=`readlink -f $1`
+OLD_DIR=`readlink -f .`
+cd $DIR/jars
+rm -f java-scpclient-*.jar jaxrpc-api-*.jar haas-imagej-client-*.jar haas-java-client-*.jar
+cd $OLD_DIR
+cp target/module-assembly-bin/lib/*.jar $DIR/jars/
+$DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE
