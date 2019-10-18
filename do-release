@@ -7,7 +7,9 @@ mvn clean install
 DIR=`readlink -f $1`
 OLD_DIR=`readlink -f .`
 cd $DIR/jars
-rm -f java-scpclient-*.jar jaxrpc-api-*.jar haas-imagej-client-*.jar haas-java-client-*.jar
+rm -f heappe-java-client-*.jar hpc-workflow-manager-client-*.jar \
+ hpc-workflow-manager-heappe-adapter-*.jar jaxrpc-api-*.jar \
+ scp-java-client-*.jar swing-javafx-ui-*.jar
 cd $OLD_DIR
 cp target/module-assembly-bin/lib/*.jar $DIR/jars/
 $DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE

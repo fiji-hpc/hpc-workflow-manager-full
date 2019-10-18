@@ -18,7 +18,6 @@
 				<include>cz.it4i.fiji:heappe-java-client:jar</include>
 				<include>cz.it4i.fiji:scp-java-client:jar</include>
 				<include>it4i-fiji:swing-javafx-ui:jar</include>
-				<include>it4i-fiji:it4i-common:jar</include>
 				<include>javax.xml:jaxrpc-api:jar</include>
 			</includes>
 		</dependencySet>

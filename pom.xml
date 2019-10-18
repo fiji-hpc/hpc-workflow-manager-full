@@ -46,7 +46,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>cz.it4i.fiji</groupId>
-			<artifactId>hpc-workflow-manager-parent</artifactId>
+			<artifactId>hpc-workflow-manager-client</artifactId>
 			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
