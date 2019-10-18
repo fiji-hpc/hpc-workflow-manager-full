@@ -11,6 +11,9 @@
 	</properties>
 	<modules>
 		<module>hpc-workflow-manager</module>
+		<module>heappe-java-client</module>
+		<module>scp-java-client</module>
+		<module>swing-javafx-ui</module>
 	</modules>
 	<build>
 

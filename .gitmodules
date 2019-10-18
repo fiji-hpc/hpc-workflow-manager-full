@@ -1,3 +1,12 @@
 [submodule "hpc-workflow-manager"]
 	path = hpc-workflow-manager
 	url = git@github.com:fiji-hpc/hpc-workflow-manager.git
+[submodule "scp-java-client"]
+	path = scp-java-client
+	url = git@github.com:fiji-hpc/scp-java-client.git
+[submodule "heappe-java-client"]
+	path = heappe-java-client
+	url = git@github.com:fiji-hpc/heappe-java-client.git
+[submodule "swing-javafx-ui"]
+	path = swing-javafx-ui
+	url = git@code.it4i.cz:fiji/swing-javafx-ui.git
