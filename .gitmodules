@@ -10,3 +10,6 @@
 [submodule "swing-javafx-ui"]
 	path = swing-javafx-ui
 	url = git@code.it4i.cz:fiji/swing-javafx-ui.git
+[submodule "cluster_job_launcher"]
+	path = cluster_job_launcher
+	url = https://code.it4i.cz/fiji/cluster_job_launcher.git
