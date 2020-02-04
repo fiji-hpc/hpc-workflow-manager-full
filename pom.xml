@@ -11,8 +11,8 @@
 	</properties>
 	<modules>
 		<module>cluster_job_launcher</module>
-		<module>hpc-workflow-manager</module>
 		<module>heappe-java-client</module>
+		<module>hpc-workflow-manager</module>
 		<module>scp-java-client</module>
 		<module>swing-javafx-ui</module>
 	</modules>

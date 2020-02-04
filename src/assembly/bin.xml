@@ -13,12 +13,18 @@
 			<scope>runtime</scope>
 			<useProjectArtifact>false</useProjectArtifact>
 			<includes>
-				<include>cz.it4i.fiji:hpc-workflow-manager-client:jar</include>
-				<include>cz.it4i.fiji:hpc-workflow-manager-heappe-adapter:jar</include>
+				<!-- Libraries for hpc-workflow-manager -->
+				<include>cz.it4i.fiji:cluster-job-launcher:jar</include>
 				<include>cz.it4i.fiji:heappe-java-client:jar</include>
+				<include>cz.it4i.fiji:hpc-workflow-manager-client:jar</include>
+				<include>cz.it4i.fiji:hpc-workflow-manager-hpc-adapter:jar</include>
 				<include>cz.it4i.fiji:scp-java-client:jar</include>
 				<include>it4i-fiji:swing-javafx-ui:jar</include>
 				<include>javax.xml:jaxrpc-api:jar</include>
+				
+				<!-- Libraries for scijava-parallel -->
+				<include>it4i-fiji:it4i-common:jar</include>
+				<include>org.scijava:scijava-parallel:jar</include>
 			</includes>
 		</dependencySet>
 	</dependencySets>
