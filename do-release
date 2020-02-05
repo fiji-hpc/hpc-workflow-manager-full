@@ -1,15 +1,29 @@
 #!/usr/bin/env bash
-#this script build required libraries and copies into Fiji installation directory
+#
+# The script build required libraries and copies into 
+#   Fiji installation directory
+#
+#Usage: do-release <Directory with Fiji installation>
+#
+
 FIJI_APP=ImageJ-linux64
 UPDATE_SITE=P2E-IT4Innovations
-mvn clean install
+mvn clean install -Denforcer.skip=true
 
 DIR=`readlink -f $1`
 OLD_DIR=`readlink -f .`
+JARS="cluster-job-launcher-*.jar \
+ heappe-java-client-*.jar \
+ hpc-workflow-manager-client-*.jar \
+ hpc-workflow-manager-hpc-adapter-*.jar \
+ it4i-common-*.jar \
+ jaxrpc-api-*.jar \
+ scijava-parallel-*.jar \
+ scp-java-client-*.jar \
+ swing-javafx-ui-*.jar"
+
 cd $DIR/jars
-rm -f heappe-java-client-*.jar hpc-workflow-manager-client-*.jar \
- hpc-workflow-manager-heappe-adapter-*.jar jaxrpc-api-*.jar \
- scp-java-client-*.jar swing-javafx-ui-*.jar
+rm -f $JARS
 cd $OLD_DIR
 cp target/module-assembly-bin/lib/*.jar $DIR/jars/
 $DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE
