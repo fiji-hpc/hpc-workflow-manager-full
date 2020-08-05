@@ -21,6 +21,12 @@
 				<include>cz.it4i.fiji:scp-java-client:jar</include>
 				<include>it4i-fiji:swing-javafx-ui:jar</include>
 				<include>javax.xml:jaxrpc-api:jar</include>
+				<include>cz.it4i.fiji:runners-logging-ui:jar</include>
+
+				<!-- Libraries for icons -->
+				<include>org.kordamp.ikonli:ikonli-core</include>
+				<include>org.kordamp.ikonli:ikonli-javafx</include>
+				<include>org.kordamp.ikonli:ikonli-materialdesign-pack</include>
 				
 				<!-- Libraries for scijava-parallel -->
 				<include>it4i-fiji:it4i-common:jar</include>
