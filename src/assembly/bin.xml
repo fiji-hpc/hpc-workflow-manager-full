@@ -28,6 +28,9 @@
 				<include>org.kordamp.ikonli:ikonli-javafx</include>
 				<include>org.kordamp.ikonli:ikonli-materialdesign-pack</include>
 				
+				<!-- Library for the remote job info ini file -->
+				<include>org.ini4j:ini4j</include>
+				
 				<!-- Libraries for scijava-parallel -->
 				<include>it4i-fiji:it4i-common:jar</include>
 				<include>org.scijava:scijava-parallel:jar</include>
