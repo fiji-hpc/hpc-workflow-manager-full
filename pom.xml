@@ -15,6 +15,7 @@
 		<module>hpc-workflow-manager</module>
 		<module>scp-java-client</module>
 		<module>swing-javafx-ui</module>
+		<module>runners-logging-ui</module>
 	</modules>
 	<build>
 
