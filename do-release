@@ -16,11 +16,24 @@ JARS="cluster-job-launcher-*.jar \
  heappe-java-client-*.jar \
  hpc-workflow-manager-client-*.jar \
  hpc-workflow-manager-hpc-adapter-*.jar \
+ ikonli-core-*.jar \
+ ikonli-javafx-*.jar \
+ ikonli-materialdesign-pack-*.jar \
+ ini4j-*.jar \
  it4i-common-*.jar \
  jaxrpc-api-*.jar \
+ runners-logging-ui-*.jar \
  scijava-parallel-*.jar \
  scp-java-client-*.jar \
  swing-javafx-ui-*.jar"
+ 
+ luster-job-launcher-0.0.4-SNAPSHOT.jar              ini4j-0.5.4.jar
+heappe-java-client-2.0.0-SNAPSHOT.jar                it4i-common-0.1.0.jar
+hpc-workflow-manager-client-1.1.3-SNAPSHOT.jar       jaxrpc-api-1.1.jar
+hpc-workflow-manager-hpc-adapter-1.1.3-SNAPSHOT.jar  runners-logging-ui-0.0.4-SNAPSHOT.jar
+ikonli-core-2.4.0.jar                                scijava-parallel-1.1.1-SNAPSHOT.jar
+ikonli-javafx-2.4.0.jar                              scp-java-client-1.2.1.jar
+ikonli-materialdesign-pack-2.4.0.jar                 swing-javafx-ui-0.5.0.jar
 
 cd $DIR/jars
 rm -f $JARS
