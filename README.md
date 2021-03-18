@@ -5,7 +5,7 @@ This is a bundle of all the projects that are used to build the HPC Workflow Man
 ## Build and installation prerequisites
 You will need the following:
 * You need a computer with either Windows, Linux or macOS.
-* JDK 8, the recommended JDK version is the [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html). If you do not whish to use this distribution you will need to choose one which contains JavaFX.
+* JDK 8, the recommended JDK version is the [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html). If you do not wish to use this distribution you will need to choose one which contains JavaFX.
 * JavaFX is used for the GUI, many JDK 8 distributions do not include it by default and a separate installation is necessary for example in OpenJDK.
 * [Maven](https://maven.apache.org/) is used to automate the building process.
 
@@ -36,8 +36,8 @@ HPC Workflow Manager is now ready to be used.
 
 ### Further information
 These Fiji wiki articles were written in the past and some information may be out-of-date.
-However they contain relevant information on the design and motivation as well as the SPIMM workflow type which is availabe for use in current versions:
+However they contain relevant information on the design and motivation as well as the SPIMM workflow type which is available for use in current versions:
 * Click [here](https://imagej.net/SPIM_Workflow_Manager_For_HPC) for an article on the Fiji wiki on the SPIMM Workflow features.
 * Click [here](https://imagej.net/HPC_Workflow_Manager) for more information on how to use the Macro parallelization features.
-Additinally for more information on one of the ways used to connect to the cluster (middleware):
+Additionally for more information on one of the ways used to connect to the cluster (middleware):
 * [HEAppE Middleware](https://code.it4i.cz/ADAS/HEAppE/Middleware/-/wikis/home) which can be used for SPIMM Workflow type jobs and Macro jobs.
