@@ -2,7 +2,7 @@
 ## Introduction
 This is a bundle of all the projects that are used to build the HPC Workflow Manager.
 
-## Build and installation pre-requisites
+## Build and installation prerequisites
 You will need the following:
 * You need a computer with either Windows, Linux or macOS.
 * JDK 8, the recommended JDK version is the [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html). If you do not whish to use this distribution you will need to choose one which contains JavaFX.
