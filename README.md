@@ -1,6 +1,7 @@
 # HPC Workflow Manager
 ## Introduction
 This is a bundle of all the projects that are used to build the HPC Workflow Manager.
+That said, this is the repository to start with in order to build the whole project.
 
 ## Build and installation prerequisites
 You will need the following:
