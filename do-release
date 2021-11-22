@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 #
-# The script build required libraries and copies into 
-#   Fiji installation directory
+# This script builds required libraries and copies into 
+#   Fiji installation directory.
 #
 #Usage: do-release <Directory with Fiji installation>
 #
-
-FIJI_APP=ImageJ-linux64
 UPDATE_SITE=HPC-ParallelTools
+
 mvn clean install -Denforcer.skip=true
 
 DIR=`readlink -f $1`
@@ -32,4 +31,17 @@ cd $DIR/jars
 rm -f $JARS
 cd $OLD_DIR
 cp target/module-assembly-bin/lib/*.jar $DIR/jars/
+
+# Detect Fiji supported OS executable name:
+if [ "$(uname)" == "Darwin" ]; then
+    FIJI_APP=/Contents/MacOS/ImageJ-macosx
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    FIJI_APP=ImageJ-linux64
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    FIJI_APP=ImageJ-win64.exe
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    FIJI_APP=ImageJ-win64.exe
+fi
+echo $FIJI_APP
+
 $DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE
