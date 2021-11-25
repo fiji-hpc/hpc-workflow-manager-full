@@ -5,12 +5,18 @@
 #
 #Usage: do-release <Directory with Fiji installation>
 #
-UPDATE_SITE=HPC-ParallelTools
+UPDATE_SITE=HPC-ParallelTools_update
 
 mvn clean install -Denforcer.skip=true
 
-DIR=`readlink -f $1`
-OLD_DIR=`readlink -f .`
+if [ "$(uname)" == "Darwin" ]; then
+    DIR=`greadlink -f $1`
+    OLD_DIR=`greadlink -f .`
+else
+    DIR=`readlink -f $1`
+    DIR=`readlink -f $1`
+fi
+
 JARS="cluster-job-launcher-*.jar \
  heappe-java-client-*.jar \
  hpc-workflow-manager-client-*.jar \
@@ -44,4 +50,4 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
 fi
 echo $FIJI_APP
 
-$DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE
+$DIR/$FIJI_APP --update upload-complete-site --force $UPDATE_SITE
