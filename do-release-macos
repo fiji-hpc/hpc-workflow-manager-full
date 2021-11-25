@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# The script build required libraries and copies into 
+#   Fiji installation directory
+#
+#Usage: do-release <Directory with Fiji installation>
+#
+
+FIJI_APP=Contents/MacOS/ImageJ-macosx
+UPDATE_SITE=MySite
+#mvn clean install -Denforcer.skip=true
+
+DIR=`greadlink -f $1`
+OLD_DIR=`greadlink -f .`
+JARS="cluster-job-launcher-*.jar \
+ heappe-java-client-*.jar \
+ hpc-workflow-manager-client-*.jar \
+ hpc-workflow-manager-hpc-adapter-*.jar \
+ ikonli-core-*.jar \
+ ikonli-javafx-*.jar \
+ ikonli-materialdesign-pack-*.jar \
+ ini4j-*.jar \
+ it4i-common-*.jar \
+ jaxrpc-api-*.jar \
+ runners-logging-ui-*.jar \
+ scijava-parallel-*.jar \
+ scp-java-client-*.jar \
+ swing-javafx-ui-*.jar"
+ 
+
+cd $DIR/jars
+rm -f $JARS
+cd $OLD_DIR
+cp target/module-assembly-bin/lib/*.jar $DIR/jars/
+$DIR/$FIJI_APP --update upload-complete-site $UPDATE_SITE
