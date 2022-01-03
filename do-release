@@ -7,7 +7,7 @@
 #
 UPDATE_SITE=HPC-ParallelTools_update
 
-mvn clean install -Denforcer.skip=true
+#mvn clean install -Denforcer.skip=true
 
 if [ "$(uname)" == "Darwin" ]; then
     DIR=`greadlink -f $1`
@@ -38,16 +38,28 @@ rm -f $JARS
 cd $OLD_DIR
 cp target/module-assembly-bin/lib/*.jar $DIR/jars/
 
+cd $DIR/jars
+for i in $JARS
+do
+	JARS_FINAL+="jars/"`ls $i`" "
+done
+cd $OLD_DIR
+
+echo $JARS_FINAL
+
 # Detect Fiji supported OS executable name:
 if [ "$(uname)" == "Darwin" ]; then
     FIJI_APP=/Contents/MacOS/ImageJ-macosx
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     FIJI_APP=ImageJ-linux64
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+elif [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
     FIJI_APP=ImageJ-win64.exe
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+elif [ "$(expr substr $(uname -s) 1 9)" == "CYGWIN_NT" ]; then
     FIJI_APP=ImageJ-win64.exe
 fi
 echo $FIJI_APP
 
-$DIR/$FIJI_APP --update upload-complete-site --force $UPDATE_SITE
+$DIR/$FIJI_APP --update upload --update-site ${UPDATE_SITE} $JARS_FINAL
+
+echo "If the automatic update of the Fiji update site failed, manually do:"
+echo "Start Fiji, 'Help' > 'Update...', click 'OK', highlight all 'Names', right-click and select 'Upload to HPC-ParallelTools_update' select 'Apply changes' enter the password and finally close Fiji."
