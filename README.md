@@ -3,6 +3,19 @@
 This is a bundle of all the projects that are used to build the HPC Workflow Manager.
 That said, this is the repository to start with in order to build the whole project.
 
+## Important links
+- [__The Short Guide on how to install and use the project__](https://github.com/fiji-hpc/parallel-macro/wiki/Short-Guide)
+- [The official web page about this whole project](https://fiji-hpc.github.io/hpc-parallel-tools/)
+- [Wiki page of the project](https://imagej.net/HPC_Workflow_Manager) on [imagej.net](https://imagej.net/)
+
+## Reporting issues
+I'm sure issues will come across :( <br/>
+[Please, tell us here.](https://github.com/fiji-hpc/parallel-macro/issues)
+
+<br/>
+<br/>
+
+# Building and installing the client part
 ## Build and installation prerequisites
 You will need the following:
 * You need a computer with either Windows, Linux or macOS.
@@ -29,13 +42,20 @@ Follow the these steps to install:
 * Extract the downloaded zip archive anywhere on your system. Fiji is now installed.
 * Copy all of the generated jar files found in ```hpc-workflow-manager-full/target/module-assembly-bin/lib``` (of the cloned directory) in the ```plugins``` or ```jars``` directory of Fiji (either directory will do, there is no need to copy to both directories).
 
-HPC Workflow Manager is now ready to be used.
+HPC Workflow Manager, **the client local version**, is now ready to be used.
 
+<br/>
+<br/>
+
+# Building and installing the server part
 ## How to setup the remote cluster for use with HPC Workflow Manager
 * If you want to use the parallel Macro and Script features please read the [installation guide](https://github.com/fiji-hpc/Ij1MPIWrapper/blob/master/README.md), and then follow the [short guide](https://github.com/fiji-hpc/Ij1MPIWrapper/wiki/Short-Guide) to get started.
 * You may also consider to use the Script (Jython) features along with the [scijava-parallel-mpi](https://github.com/fiji-hpc/scijava-parallel-mpi/wiki/How-to-Install-and-Run) project which provides parallelized common image operations.
 
-### Further information
+<br/>
+<br/>
+
+# Further information
 These Fiji wiki articles were written in the past and some information may be out-of-date.
 However they contain relevant information on the design and motivation as well as the SPIMM workflow type which is available for use in current versions:
 * Click [here](https://imagej.net/SPIM_Workflow_Manager_For_HPC) for an article on the Fiji wiki on the SPIMM Workflow features.
