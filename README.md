@@ -49,7 +49,7 @@ HPC Workflow Manager, **the client local version**, is now ready to be used.
 
 # Building and installing the server part
 ## How to setup the remote cluster for use with HPC Workflow Manager
-* If you want to use the parallel Macro and Script features please read the [installation guide](https://github.com/fiji-hpc/Ij1MPIWrapper/blob/master/README.md), and then follow the [short guide](https://github.com/fiji-hpc/Ij1MPIWrapper/wiki/Short-Guide) to get started.
+* If you want to use the parallel Macro and Script features please read the [installation guide](https://github.com/fiji-hpc/parallel-macro/blob/master/README.md), and then follow the [short guide](https://github.com/fiji-hpc/parallel-macro/wiki/Short-Guide) to get started.
 * You may also consider to use the Script (Jython) features along with the [scijava-parallel-mpi](https://github.com/fiji-hpc/scijava-parallel-mpi/wiki/How-to-Install-and-Run) project which provides parallelized common image operations.
 
 <br/>
