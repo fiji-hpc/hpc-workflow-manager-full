@@ -1,9 +1,9 @@
-/target
-
-/.settings
-
 .project
-update
-.checksums
+.classpath
+.settings/
+target/
 
+*.bench
+
+benchmark-collector/build\.sh
 .DS_Store
