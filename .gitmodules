@@ -12,7 +12,7 @@
 	url = git@github.com:fiji-hpc/cluster_job_launcher.git
 [submodule "runners-logging-ui"]
 	path = runners-logging-ui
-	url = https://github.com/fiji-hpc/runners-logging-ui.git
+	url = git@github.com:fiji-hpc/runners-logging-ui.git
 [submodule "wfm-test-client"]
 	path = wfm-test-client
-	url = https://github.com/fiji-hpc/wfm-test-client.git
+	url = git@github.com:fiji-hpc/wfm-test-client.git
